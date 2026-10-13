@@ -249,6 +249,7 @@ a:focus-visible {
    =============================== */
 
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -270,6 +271,21 @@ a:focus-visible {
   border-color: var(--color-danger);
 }
 
+.product-card__badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  padding: 4px 8px;
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border-radius: var(--radius-sm);
+}
+
+.product-card__link {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
 .product-card__title {
   margin: 0;
   color: var(--color-text);
@@ -289,9 +305,8 @@ a:focus-visible {
   color: var(--color-danger);
 }
 
-/* Кнопка и ссылка внутри карточки прижимаются к нижнему краю. */
-.product-card__button,
-.product-card__link {
+/* Кнопка внутри карточки прижимается к нижнему краю. */
+.product-card__button {
   margin-top: auto;
   align-self: flex-start;
 }
@@ -312,6 +327,10 @@ a:focus-visible {
 /* Элементы макета: определяют только положение в сетке. */
 .catalog-layout__filters {
   grid-area: filters;
+  position: sticky;
+  top: var(--space-md);
+  z-index: 10;
+  align-self: start;
 }
 
 .catalog-layout__products {
@@ -486,4 +505,79 @@ a:focus-visible {
 
 .site-footer__text {
   margin: 0 0 var(--space-sm);
+}
+
+/* ===============================
+   17. Дополнения практики 8
+   =============================== */
+
+/* Разделитель между вторым и последующими звеньями хлебных крошек. */
+.breadcrumbs__link + .breadcrumbs__link::before {
+  content: " / ";
+  color: var(--color-muted);
+}
+
+/* Блок product-details (страница товара) */
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+}
+
+.product-details__image {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.product-details__title {
+  margin-top: 0;
+}
+
+.product-details__description {
+  color: var(--color-muted);
+}
+
+.product-details__price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Блок product-table (таблица характеристик) */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table__caption {
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+  text-align: left;
+}
+
+.product-table th,
+.product-table td {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.product-table th {
+  background-color: var(--color-surface);
+}
+
+/* Модификатор формы на отдельной странице */
+.order-form--page {
+  max-width: 560px;
+}
+
+/* Блок scroll-top: фиксированная кнопка «Наверх» */
+.scroll-top {
+  position: fixed;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
+  z-index: 100;
 }
