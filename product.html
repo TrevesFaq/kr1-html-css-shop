@@ -3,100 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Карточка товара учебного интернет-магазина: описание, характеристики и цена.">
-  <title>Товар 1 — Учебный интернет-магазин</title>
+  <meta name="description" content="Retro Shelf — магазин ретрогейминга: консоли, комплектующие и аксессуары.">
+  <title>Товар — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="contacts.html">Контакты</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="index.html#popular">Популярные товары</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="site-header__intro wrap">
+      <div><a class="site-header__name pixel" href="index.html">Retro Shelf</a><p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p></div>
+      <span class="site-header__label">КР №2</span>
     </div>
   </header>
-
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-      <span class="breadcrumbs__current">Товар 1</span>
-    </nav>
-
-    <article class="product-details">
-      <img
-        class="product-details__image"
-        src="images/product-placeholder.svg"
-        alt="Изображение учебного товара"
-        width="480"
-        height="320"
-      >
-
-      <div class="product-details__info">
-        <h1 class="product-details__title">Товар 1</h1>
-        <p class="product-details__description">
-          Подробное описание учебного товара. Здесь будет размещена информация
-          о назначении товара, его особенностях и условиях покупки.
-        </p>
-        <p class="product-details__price">Цена: 1000 руб.</p>
-        <a class="button button--primary" href="order.html">Оставить заявку</a>
-      </div>
-    </article>
-
-    <section class="section">
-      <table class="product-table">
-        <caption class="product-table__caption">Характеристики товара</caption>
-        <thead>
-          <tr>
-            <th>Параметр</th>
-            <th>Значение</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Категория</td>
-            <td>Учебный товар</td>
-          </tr>
-          <tr>
-            <td>Цена</td>
-            <td>1000 руб.</td>
-          </tr>
-          <tr>
-            <td>Наличие</td>
-            <td>В наличии</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <aside class="aside-info">
-      <h2 class="aside-info__title">Доставка и оплата</h2>
-      <p class="aside-info__text">
-        Условия доставки и способы оплаты уточняются при оформлении заявки.
-      </p>
-    </aside>
+  <nav class="site-nav" aria-label="Основная навигация"><div class="wrap site-nav__inner">
+    <a class="site-nav__brand pixel" href="index.html">Retro Shelf</a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="main-menu">Меню</button>
+    <ul class="site-nav__list" id="main-menu">        <li><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
+        <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+      <li class="site-nav__more"><a class="site-nav__link" href="catalog.html">Дополнительно</a><ul><li><a href="catalog.html">Все товары</a></li><li><a href="order.html">Оформить заявку</a></li><li><a href="index.html#popular">Популярное</a></li></ul></li>
+    </ul>
+  </div></nav>
+  <main class="wrap page-main"><div class="notice">Нажмите «Подробнее» в каталоге, чтобы открыть нужный товар.</div>
+    <article class="product-view" id="mega-drive-2"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Sega Mega Drive 2</nav><div class="product-details"><img src="images/segamd2.jpeg" alt="Sega Mega Drive 2"><div class="product-details__info"><span class="tag">Новинка</span><p class="product-card__category">Консоли</p><h1>Sega Mega Drive 2</h1><p>Компактная ревизия Mega Drive 1993 года. Проверена, очищена, выдаёт чистую картинку по AV. В комплекте блок питания и один геймпад.</p><strong class="product-details__price">6 500 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=mega-drive-2">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Консоли</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>6 500 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="snes"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Super Nintendo (SNES)</nav><div class="product-details"><img src="images/supernin.jpg" alt="Super Nintendo (SNES)"><div class="product-details__info"><span class="tag">Выбор покупателей</span><p class="product-card__category">Консоли</p><h1>Super Nintendo (SNES)</h1><p>Оригинальная Super Nintendo, регион PAL. Корпус без сильных потёртостей, кнопки и слот картриджа проверены.</p><strong class="product-details__price">12 900 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=snes">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Консоли</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>12 900 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="ps1"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / PlayStation 1</nav><div class="product-details"><img src="images/ps1.jpeg" alt="PlayStation 1"><div class="product-details__info"><p class="product-card__category">Консоли</p><h1>PlayStation 1</h1><p>Консоль PlayStation 1 в рабочем состоянии. Привод проверен на нескольких дисках.</p><strong class="product-details__price">5 900 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=ps1">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Консоли</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>5 900 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="ps2"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / PlayStation 2</nav><div class="product-details"><img src="images/ps2.jpg" alt="PlayStation 2"><div class="product-details__info"><span class="tag">Хит</span><p class="product-card__category">Консоли</p><h1>PlayStation 2</h1><p>PlayStation 2 проверена и готова к игре. Поддерживает большую библиотеку классических игр.</p><strong class="product-details__price">7 500 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=ps2">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Консоли</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>7 500 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="psp"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / PlayStation Portable (PSP)</nav><div class="product-details"><img src="images/psp.jpeg" alt="PlayStation Portable (PSP)"><div class="product-details__info"><span class="tag">Новинка</span><p class="product-card__category">Консоли</p><h1>PlayStation Portable (PSP)</h1><p>Портативная консоль Sony с большим экраном. Кнопки и привод проверены.</p><strong class="product-details__price">6 900 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=psp">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Консоли</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>6 900 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="ps-vita"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / PlayStation Vita</nav><div class="product-details"><img src="images/psvita.jpeg" alt="PlayStation Vita"><div class="product-details__info"><span class="tag">Выбор покупателей</span><p class="product-card__category">Консоли</p><h1>PlayStation Vita</h1><p>Портативная консоль Sony с сенсорным экраном и двумя стиками.</p><strong class="product-details__price">11 900 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=ps-vita">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Консоли</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>11 900 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="nintendo-3ds"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Nintendo 3DS</nav><div class="product-details"><img src="images/3ds.jpeg" alt="Nintendo 3DS"><div class="product-details__info"><span class="tag">Скидка</span><p class="product-card__category">Консоли</p><h1>Nintendo 3DS</h1><p>Nintendo 3DS с двумя экранами и библиотекой игр Nintendo.</p><strong class="product-details__price">10 500 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=nintendo-3ds">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Консоли</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>10 500 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="ps1-laser"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Лазерная головка для PS1</nav><div class="product-details"><img src="images/laser.jpeg" alt="Лазерная головка для PS1"><div class="product-details__info"><p class="product-card__category">Комплектующие</p><h1>Лазерная головка для PS1</h1><p>Деталь для ремонта оптического привода PlayStation 1.</p><strong class="product-details__price">1 800 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=ps1-laser">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Комплектующие</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>1 800 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="psu-9v"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Блок питания 9V</nav><div class="product-details"><img src="images/9v.jpeg" alt="Блок питания 9V"><div class="product-details__info"><span class="tag">Хит</span><p class="product-card__category">Комплектующие</p><h1>Блок питания 9V</h1><p>Блок питания 9V для совместимых ретро-консолей.</p><strong class="product-details__price">1 200 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=psu-9v">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Комплектующие</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>1 200 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="ps1-memory-card"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Карта памяти для PS1</nav><div class="product-details"><img src="images/storage.jpeg" alt="Карта памяти для PS1"><div class="product-details__info"><span class="tag">Скидка</span><p class="product-card__category">Комплектующие</p><h1>Карта памяти для PS1</h1><p>Карта памяти для сохранения игр на PlayStation 1.</p><strong class="product-details__price">900 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=ps1-memory-card">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Комплектующие</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>900 руб.</td></tr></tbody></table></article>
+    <article class="product-view" id="md-pad"><nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Геймпад 6 кнопок для Mega Drive</nav><div class="product-details"><img src="images/gamepad.jpeg" alt="Геймпад 6 кнопок для Mega Drive"><div class="product-details__info"><p class="product-card__category">Комплектующие</p><h1>Геймпад 6 кнопок для Mega Drive</h1><p>Геймпад с шестью кнопками для Sega Mega Drive.</p><strong class="product-details__price">1 500 руб.</strong><div class="product-card__actions"><a class="button" href="order.html?product=md-pad">Оформить заявку</a><a class="button button--outline" href="catalog.html">Назад в каталог</a></div></div></div><h2>Характеристики</h2><table class="product-table"><tbody><tr><th>Категория</th><td>Комплектующие</td></tr><tr><th>Состояние</th><td>Проверено перед продажей</td></tr><tr><th>Наличие</th><td>В наличии</td></tr><tr><th>Цена</th><td>1 500 руб.</td></tr></tbody></table></article>
   </main>
-
-  <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
-
-  <a class="button button--primary scroll-top" href="#" aria-label="Наверх">Наверх</a>
+  <footer class="site-footer"><div class="wrap site-footer__inner">
+    <p>© 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
+    <div><a href="catalog.html">Каталог</a><a href="order.html">Заявка</a><a href="contacts.html">Контакты</a></div>
+  </div></footer>
 </body>
 </html>

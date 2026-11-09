@@ -1,75 +1,67 @@
-// Получаем модальное окно по id.
-const orderDialog = document.getElementById('order-dialog');
+const carousel = document.querySelector('.carousel');
 
-// Получаем все кнопки заказа в карточках товаров.
-const orderButtons = document.querySelectorAll('.product-card__button');
+if (carousel) {
+  const slides = Array.from(carousel.querySelectorAll('.carousel__slide'));
+  const dots = Array.from(carousel.querySelectorAll('.carousel__dot'));
+  let activeIndex = 0;
+  let timer;
 
-// Получаем кнопку закрытия модального окна.
-const closeDialogButton = document.getElementById('close-order-dialog');
-
-// Получаем скрытое поле, в которое будет записан выбранный товар.
-const selectedProductInput = document.getElementById('selected-product');
-
-// Перебираем все кнопки «Заказать».
-orderButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    // Получаем название товара из data-атрибута.
-    const productName = button.dataset.product;
-
-    // Записываем название товара в скрытое поле формы.
-    selectedProductInput.value = productName;
-
-    // Открываем модальное окно.
-    orderDialog.showModal();
-  });
-});
-
-// Закрываем модальное окно по кнопке «Закрыть».
-closeDialogButton.addEventListener('click', () => {
-  orderDialog.close();
-});
-
-
-// Получаем форму заявки.
-const orderForm = document.getElementById('order-form');
-
-// Получаем сообщение об успешной отправке.
-const successMessage = document.getElementById('success-message');
-
-// Обрабатываем отправку формы.
-orderForm.addEventListener('submit', (event) => {
-  // Отменяем стандартную отправку формы,
-  // потому что backend пока не подключён.
-  event.preventDefault();
-
-  // Сбрасываем предыдущие признаки ошибок.
-  const formElements = Array.from(orderForm.elements);
-
-  formElements.forEach((element) => {
-    if (element.willValidate) {
-      element.removeAttribute('aria-invalid');
-    }
-  });
-
-  // Проверяем встроенные HTML-ограничения формы.
-  if (!orderForm.checkValidity()) {
-    formElements.forEach((element) => {
-      if (element.willValidate && !element.checkValidity()) {
-        element.setAttribute('aria-invalid', 'true');
-      }
+  function showSlide(index) {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, itemIndex) => {
+      const active = itemIndex === activeIndex;
+      slide.classList.toggle('is-active', active);
+      slide.setAttribute('aria-hidden', String(!active));
+      dots[itemIndex].classList.toggle('is-active', active);
+      dots[itemIndex].setAttribute('aria-current', String(active));
     });
-
-    // Показываем стандартные сообщения браузера.
-    orderForm.reportValidity();
-    return;
   }
 
-  // Показываем сообщение об успешной отправке.
-  successMessage.hidden = false;
+  function startTimer() {
+    window.clearInterval(timer);
+    timer = window.setInterval(() => showSlide(activeIndex + 1), 5000);
+  }
 
-  // Очищаем форму.
-  orderForm.reset();
+  carousel.querySelector('.carousel__arrow--prev').addEventListener('click', () => {
+    showSlide(activeIndex - 1);
+    startTimer();
+  });
+  carousel.querySelector('.carousel__arrow--next').addEventListener('click', () => {
+    showSlide(activeIndex + 1);
+    startTimer();
+  });
+  dots.forEach((dot, index) => dot.addEventListener('click', () => {
+    showSlide(index);
+    startTimer();
+  }));
+  carousel.addEventListener('mouseenter', () => window.clearInterval(timer));
+  carousel.addEventListener('mouseleave', startTimer);
+  carousel.addEventListener('focusin', () => window.clearInterval(timer));
+  carousel.addEventListener('focusout', startTimer);
+  startTimer();
+}
 
-  // Закрываем модальное окно.
-  orderDialog.close();
-});
+const menuButton = document.querySelector('.site-nav__toggle');
+const menu = document.querySelector('.site-nav__list');
+if (menuButton && menu) {
+  menuButton.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('is-open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+
+const productSelect = document.getElementById('order-product');
+if (productSelect) {
+  const requestedProduct = new URLSearchParams(window.location.search).get('product');
+  if (requestedProduct) productSelect.value = requestedProduct;
+}
+
+const orderForm = document.getElementById('page-order-form');
+if (orderForm) {
+  orderForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!orderForm.reportValidity()) return;
+    document.getElementById('form-success').hidden = false;
+    orderForm.reset();
+  });
+}

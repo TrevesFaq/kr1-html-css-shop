@@ -3,66 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина.">
-  <title>Контакты — Учебный интернет-магазин</title>
+  <meta name="description" content="Retro Shelf — магазин ретрогейминга: консоли, комплектующие и аксессуары.">
+  <title>Контакты — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="site-header__intro wrap">
+      <div><a class="site-header__name pixel" href="index.html">Retro Shelf</a><p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p></div>
+      <span class="site-header__label">КР №2</span>
     </div>
   </header>
-
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Контакты</span>
-    </nav>
-
-    <section class="section">
-      <h1 class="section__title">Контакты</h1>
-      <p class="section__text">
-        Здесь размещается контактная информация учебного интернет-магазина.
-      </p>
-
-      <ul class="section__list">
-        <li>Телефон: +7 (900) 000-00-00</li>
-        <li>E-mail: info@example.com</li>
-        <li>Адрес: г. Москва, учебный проект</li>
-      </ul>
-    </section>
-
-    <section class="section" id="feedback">
-      <h2 class="section__title">Обратная связь</h2>
-      <p class="section__text">
-        Для отправки заявки используйте страницу заказа или форму в модальном окне на главной странице.
-      </p>
-      <a class="button button--primary" href="order.html">Перейти к форме</a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
-  <a class="button button--primary scroll-top" href="#" aria-label="Наверх">Наверх</a>
+  <nav class="site-nav" aria-label="Основная навигация"><div class="wrap site-nav__inner">
+    <a class="site-nav__brand pixel" href="index.html">Retro Shelf</a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="main-menu">Меню</button>
+    <ul class="site-nav__list" id="main-menu">        <li><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="product.html">Товар</a></li>
+        <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a></li>
+      <li class="site-nav__more"><a class="site-nav__link" href="catalog.html">Дополнительно</a><ul><li><a href="catalog.html">Все товары</a></li><li><a href="order.html">Оформить заявку</a></li><li><a href="index.html#popular">Популярное</a></li></ul></li>
+    </ul>
+  </div></nav>
+  <main class="wrap page-main"><h1 class="pixel">Контакты</h1><div class="feature-grid contact-grid"><section class="feature"><h2>Как связаться</h2><ul class="contact-list"><li>Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a></li><li>E-mail: <a href="mailto:info@example.com">info@example.com</a></li><li>Адрес: г. Москва, учебный проект</li></ul></section><section class="feature"><h2>Режим работы</h2><p>Пн–Пт: 9:00–18:00. Заявки принимаются круглосуточно.</p><a class="button" href="order.html">Оставить заявку</a></section></div></main>
+  <footer class="site-footer"><div class="wrap site-footer__inner">
+    <p>© 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
+    <div><a href="catalog.html">Каталог</a><a href="order.html">Заявка</a><a href="contacts.html">Контакты</a></div>
+  </div></footer>
 </body>
 </html>

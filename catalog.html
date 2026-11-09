@@ -3,146 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
-  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <meta name="description" content="Retro Shelf — магазин ретрогейминга: консоли, комплектующие и аксессуары.">
+  <title>Каталог — Retro Shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="contacts.html">Контакты</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="site-header__intro wrap">
+      <div><a class="site-header__name pixel" href="index.html">Retro Shelf</a><p>Магазин ретрогейминга: консоли, комплектующие и аксессуары</p></div>
+      <span class="site-header__label">КР №2</span>
     </div>
   </header>
-
-  <main>
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <span class="breadcrumbs__current">Каталог</span>
-    </nav>
-
-    <section class="section">
-      <h1 class="section__title">Каталог товаров</h1>
-      <p class="section__text">
-        На этой странице представлен учебный каталог товаров.
-        В дальнейшем здесь будут добавлены фильтры, сортировка и более
-        подробные карточки.
-      </p>
-      <a class="button button--secondary" href="order.html">Оформить заявку</a>
-    </section>
-
-    <div class="catalog-layout">
-      <aside class="catalog-filters catalog-layout__filters">
-        <h2 class="catalog-filters__title">Фильтры</h2>
-
-        <form class="catalog-filters__form" action="#" method="get">
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Категория</legend>
-
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="all">
-              Все товары
-            </label>
-
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="popular">
-              Популярные
-            </label>
-
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="new">
-              Новинки
-            </label>
-          </fieldset>
-
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Цена</legend>
-
-            <label class="catalog-filters__label" for="price-from">От</label>
-            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-
-            <label class="catalog-filters__label" for="price-to">До</label>
-            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
-          </fieldset>
-
-          <button class="button button--primary" type="submit">Применить</button>
-        </form>
-      </aside>
-
-      <section class="catalog-products catalog-layout__products">
-        <h2 class="catalog-products__title">Список товаров</h2>
-
-        <div class="products-grid">
-            <article class="product-card">
-              <span class="product-card__badge">Хит</span>
-              <h3 class="product-card__title">Товар 1</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1000 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <span class="product-card__badge">Новинка</span>
-              <h3 class="product-card__title">Товар 2</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1500 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card product-card--discount">
-              <span class="product-card__badge">Скидка</span>
-              <h3 class="product-card__title">Товар 3</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2000 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <h3 class="product-card__title">Товар 4</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2500 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <span class="product-card__badge">Новинка</span>
-              <h3 class="product-card__title">Товар 5</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 3000 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <h3 class="product-card__title">Товар 6</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 3500 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
-  <a class="button button--primary scroll-top" href="#" aria-label="Наверх">Наверх</a>
+  <nav class="site-nav" aria-label="Основная навигация"><div class="wrap site-nav__inner">
+    <a class="site-nav__brand pixel" href="index.html">Retro Shelf</a>
+    <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="main-menu">Меню</button>
+    <ul class="site-nav__list" id="main-menu">        <li><a class="site-nav__link" href="index.html">Главная</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+        <li><a class="site-nav__link" href="product.html">Товар</a></li>
+        <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+        <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+      <li class="site-nav__more"><a class="site-nav__link" href="catalog.html">Дополнительно</a><ul><li><a href="catalog.html">Все товары</a></li><li><a href="order.html">Оформить заявку</a></li><li><a href="index.html#popular">Популярное</a></li></ul></li>
+    </ul>
+  </div></nav>
+  <main class="wrap page-main"><p class="notice">Консоли, комплектующие и аксессуары для ретро-платформ. Выберите товар, чтобы открыть подробную карточку.</p><div class="section__heading"><h1 class="pixel">Каталог товаров</h1><a class="button button--outline" href="order.html">Оставить заявку</a></div><div class="product-grid product-grid--catalog">
+<article class="product-card"><img src="images/segamd2.jpeg" alt="Sega Mega Drive 2"><div class="product-card__body"><span class="tag">Новинка</span><p class="product-card__category">Консоли</p><h2>Sega Mega Drive 2</h2><p>16-битная классика Sega: Sonic, Streets of Rage, Golden Axe.</p><strong>6 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#mega-drive-2">Подробнее</a><a class="button button--outline" href="order.html?product=mega-drive-2">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/supernin.jpg" alt="Super Nintendo (SNES)"><div class="product-card__body"><span class="tag">Выбор покупателей</span><p class="product-card__category">Консоли</p><h2>Super Nintendo (SNES)</h2><p>Консоль 1990-х с Super Mario World и Zelda: A Link to the Past.</p><strong>12 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#snes">Подробнее</a><a class="button button--outline" href="order.html?product=snes">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/ps1.jpeg" alt="PlayStation 1"><div class="product-card__body"><p class="product-card__category">Консоли</p><h2>PlayStation 1</h2><p>Первая PlayStation: Crash Bandicoot, Resident Evil, Final Fantasy VII.</p><strong>5 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps1">Подробнее</a><a class="button button--outline" href="order.html?product=ps1">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/ps2.jpg" alt="PlayStation 2"><div class="product-card__body"><span class="tag">Хит</span><p class="product-card__category">Консоли</p><h2>PlayStation 2</h2><p>Одна из самых продаваемых консолей в истории: GTA, God of War, Metal Gear Solid.</p><strong>7 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps2">Подробнее</a><a class="button button--outline" href="order.html?product=ps2">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/psp.jpeg" alt="PlayStation Portable (PSP)"><div class="product-card__body"><span class="tag">Новинка</span><p class="product-card__category">Консоли</p><h2>PlayStation Portable (PSP)</h2><p>Портативная консоль Sony с играми на UMD и большим экраном.</p><strong>6 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#psp">Подробнее</a><a class="button button--outline" href="order.html?product=psp">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/psvita.jpeg" alt="PlayStation Vita"><div class="product-card__body"><span class="tag">Выбор покупателей</span><p class="product-card__category">Консоли</p><h2>PlayStation Vita</h2><p>Портативная консоль Sony с сенсорным экраном и двумя стиками.</p><strong>11 900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps-vita">Подробнее</a><a class="button button--outline" href="order.html?product=ps-vita">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/3ds.jpeg" alt="Nintendo 3DS"><div class="product-card__body"><span class="tag">Скидка</span><p class="product-card__category">Консоли</p><h2>Nintendo 3DS</h2><p>Портативная консоль Nintendo с двумя экранами и 3D-режимом.</p><strong>10 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#nintendo-3ds">Подробнее</a><a class="button button--outline" href="order.html?product=nintendo-3ds">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/laser.jpeg" alt="Лазерная головка для PS1"><div class="product-card__body"><p class="product-card__category">Комплектующие</p><h2>Лазерная головка для PS1</h2><p>Запасная лазерная головка для восстановления привода PlayStation.</p><strong>1 800 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps1-laser">Подробнее</a><a class="button button--outline" href="order.html?product=ps1-laser">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/9v.jpeg" alt="Блок питания 9V"><div class="product-card__body"><span class="tag">Хит</span><p class="product-card__category">Комплектующие</p><h2>Блок питания 9V</h2><p>Универсальный блок питания для 16-битных консолей.</p><strong>1 200 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#psu-9v">Подробнее</a><a class="button button--outline" href="order.html?product=psu-9v">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/storage.jpeg" alt="Карта памяти для PS1"><div class="product-card__body"><span class="tag">Скидка</span><p class="product-card__category">Комплектующие</p><h2>Карта памяти для PS1</h2><p>Карта памяти для сохранения прохождения на PlayStation 1.</p><strong>900 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#ps1-memory-card">Подробнее</a><a class="button button--outline" href="order.html?product=ps1-memory-card">Заказать</a></div></div></article>
+<article class="product-card"><img src="images/gamepad.jpeg" alt="Геймпад 6 кнопок для Mega Drive"><div class="product-card__body"><p class="product-card__category">Комплектующие</p><h2>Геймпад 6 кнопок для Mega Drive</h2><p>Шестикнопочный контроллер для игр Sega Mega Drive.</p><strong>1 500 руб.</strong><div class="product-card__actions"><a class="button" href="product.html#md-pad">Подробнее</a><a class="button button--outline" href="order.html?product=md-pad">Заказать</a></div></div></article>
+</div></main>
+  <footer class="site-footer"><div class="wrap site-footer__inner">
+    <p>© 2026 Retro Shelf. Магазин ретрогейминга. Учебный проект.</p>
+    <div><a href="catalog.html">Каталог</a><a href="order.html">Заявка</a><a href="contacts.html">Контакты</a></div>
+  </div></footer>
 </body>
 </html>
